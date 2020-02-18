@@ -14,10 +14,46 @@ import javax.persistence.Table;
 public class Employee {
    @Id
    @GeneratedValue(strategy=GenerationType.IDENTITY)
-   @Column(name="employeId")
+   @Column(name="employee_id")
 	private int employeeId;
 	
-    @Column(name="firstNmae")
+    public int getEmployeeId() {
+	return employeeId;
+}
+public void setEmployeeId(int employeeId) {
+	this.employeeId = employeeId;
+}
+public String getFirstName() {
+	return firstName;
+}
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+public String getLastName() {
+	return LastName;
+}
+public void setLastName(String lastName) {
+	LastName = lastName;
+}
+public Date getDateofBirth() {
+	return dateofBirth;
+}
+public void setDateofBirth(Date dateofBirth) {
+	this.dateofBirth = dateofBirth;
+}
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getPhoneNumber() {
+	return phoneNumber;
+}
+public void setPhoneNumber(String phoneNumber) {
+	this.phoneNumber = phoneNumber;
+}
+	@Column(name="firstName")
 	private String firstName;
 	
     @Column(name="lastName")
@@ -35,11 +71,11 @@ public class Employee {
    public Employee() {
 	   
    }
-public Employee(int employeeId, String firstName, String lastName, Date dateofBirth, String email, String phoneNumber) {
+public Employee(int employeeId, String FirstName, String LastName, Date dateofBirth, String email, String phoneNumber) {
 	super();
 	this.employeeId = employeeId;
-	this.firstName = firstName;
-	LastName = lastName;
+	this.firstName = FirstName;
+	LastName = LastName;
 	this.dateofBirth = dateofBirth;
 	this.email = email;
 	this.phoneNumber = phoneNumber;
